@@ -9,16 +9,24 @@
 /* Begin PBXBuildFile section */
 		8498E503286C634E00621B53 /* MsafiriApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498E502286C634E00621B53 /* MsafiriApp.swift */; };
 		8498E505286C634E00621B53 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498E504286C634E00621B53 /* ContentView.swift */; };
-		8498E507286C635200621B53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8498E506286C635200621B53 /* Assets.xcassets */; };
 		8498E50A286C635200621B53 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8498E509286C635200621B53 /* Preview Assets.xcassets */; };
+		8498E511286C650600621B53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8498E510286C650600621B53 /* Assets.xcassets */; };
+		8498E517286C65B600621B53 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498E516286C65B600621B53 /* Location.swift */; };
+		8498E51A286C669400621B53 /* LocationsDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498E519286C669400621B53 /* LocationsDataService.swift */; };
+		8498E51E286C67B700621B53 /* LocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498E51D286C67B700621B53 /* LocationsView.swift */; };
+		8498E520286C6B2500621B53 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8498E51F286C6B2500621B53 /* LocationsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8498E4FF286C634E00621B53 /* Msafiri.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Msafiri.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8498E502286C634E00621B53 /* MsafiriApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsafiriApp.swift; sourceTree = "<group>"; };
 		8498E504286C634E00621B53 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		8498E506286C635200621B53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8498E509286C635200621B53 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8498E510286C650600621B53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8498E516286C65B600621B53 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		8498E519286C669400621B53 /* LocationsDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsDataService.swift; sourceTree = "<group>"; };
+		8498E51D286C67B700621B53 /* LocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsView.swift; sourceTree = "<group>"; };
+		8498E51F286C6B2500621B53 /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +59,13 @@
 		8498E501286C634E00621B53 /* Msafiri */ = {
 			isa = PBXGroup;
 			children = (
+				8498E518286C667700621B53 /* DataServices */,
+				8498E515286C659D00621B53 /* ViewModels */,
+				8498E513286C658E00621B53 /* Views */,
+				8498E512286C658800621B53 /* Models */,
 				8498E502286C634E00621B53 /* MsafiriApp.swift */,
 				8498E504286C634E00621B53 /* ContentView.swift */,
-				8498E506286C635200621B53 /* Assets.xcassets */,
+				8498E510286C650600621B53 /* Assets.xcassets */,
 				8498E508286C635200621B53 /* Preview Content */,
 			);
 			path = Msafiri;
@@ -65,6 +77,38 @@
 				8498E509286C635200621B53 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8498E512286C658800621B53 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8498E516286C65B600621B53 /* Location.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8498E513286C658E00621B53 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8498E51D286C67B700621B53 /* LocationsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8498E515286C659D00621B53 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8498E51F286C6B2500621B53 /* LocationsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8498E518286C667700621B53 /* DataServices */ = {
+			isa = PBXGroup;
+			children = (
+				8498E519286C669400621B53 /* LocationsDataService.swift */,
+			);
+			path = DataServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +169,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8498E511286C650600621B53 /* Assets.xcassets in Resources */,
 				8498E50A286C635200621B53 /* Preview Assets.xcassets in Resources */,
-				8498E507286C635200621B53 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +181,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8498E51A286C669400621B53 /* LocationsDataService.swift in Sources */,
+				8498E520286C6B2500621B53 /* LocationsViewModel.swift in Sources */,
 				8498E505286C634E00621B53 /* ContentView.swift in Sources */,
+				8498E51E286C67B700621B53 /* LocationsView.swift in Sources */,
+				8498E517286C65B600621B53 /* Location.swift in Sources */,
 				8498E503286C634E00621B53 /* MsafiriApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
